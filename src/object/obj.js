@@ -1,22 +1,21 @@
-const obj = {
+export const obj = {
     name: 'мечник',
     health: 10,
     level: 2,
     attack: 80,
     defence: 40
 }
-function orderByProps(obj, [key] {
-    for(const prop in obj) {
-        const m = obj.sort((prev, next) => prev - next);
-        return `${property}: ${object[property]}`;
-    }
-    if(!obj[key]) {
-        return m;
-    }
+export function orderByProps(obj,arrKey) {
+  const keys = Object.keys(obj);
+  const  keys1 = keys.filter(key => key === arrKey[0] || key === arrKey[1] );
+  const keys2 = keys.sort((a,b) => a > b);
+  const keys3 = keys1.concat(keys2);
+  keys3.map((key) => {
+      return `key:${key}`;
+    })
 }
-orderByProps(obj,["name", "level"]);
 
-const character = {
+export const character = {
     name: 'Лучник',
     type: 'Bowman',
     health: 50,

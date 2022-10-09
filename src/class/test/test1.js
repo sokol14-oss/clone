@@ -1,4 +1,4 @@
-import { Character } from "../class/main.js"
+import { Character } from "../main.js"
 test("set name", ()=> {
     const user = new Character();
     expect(user.name = "I").toBe(Error("Значение не валидно"));
