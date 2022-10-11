@@ -6,10 +6,33 @@ export const obj = {
     defence: 40
 }
 export function orderByProps(obj,arrKey) {
-  const keys = Object.keys(obj);
-  const  keys1 = keys.filter(key => key === arrKey[0] || key === arrKey[1] );
-  const keys2 = keys.sort((a,b) => a > b);
-  const keys3 = keys1.concat(keys2);
+   const array = [];
+   const props = [];
+   for (const [key, value] of Object.entries(obj2)) {
+    const obj2 ={};
+    obj2.key = key;
+    obj2.value = value;
+    array.push(obj2);
+   array.sort((a,b) => a > b);
+  const array2 =  array.filter(key => {
+    key === arrKey[i];
+    props.push(key);
+  }
+  const keys = props.concat(array);
+  return keys;
+}
+const showAttacks = ({ special }) => {
+  return special.map((item) => {
+    const { id, name, icon, description = 'Описание недоступно' } = item;
+    return { id, name, icon, description };
+  });
+};
+
+export { orderByProps, showAttacks };
+
+
+  
+
   keys3.map((key) => {
       return `key:${key}`;
     })
