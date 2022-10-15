@@ -13,7 +13,12 @@ test("Set add all", ()=> {
     addAll(user1,user2);
     expect(add(user1)).toBe(Error("Ошибка"));
 })
-
+test("toArray", ()=> {
+    const user1 = new Team("Ivan","Bowman",30,30);
+    const user2 = new Team("Oleg","Bowman",50,30);
+    add(user1,user2);
+    expect(toArray(user1,user2).toEqual([user1, user2]);
+})
 test("Error", ()=> {
     const map = new ErrorRepository();
     map.set(44,"not found");

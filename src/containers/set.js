@@ -11,12 +11,9 @@ export default class Team {
 
     }
     addAll(...user){
-        this.team.add(user);
-        if(this.members.has(user)) {
-            return false;
-        }
+        user.forEach(item => user.team.add(item));
     }
     toArray(){
-Array.from(this.members);
+   return Array.from(this.members);
     }
 }
